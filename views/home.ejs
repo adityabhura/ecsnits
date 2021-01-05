@@ -1,0 +1,1686 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ECS</title>
+  <link rel="icon" href="ecs logo/logo.jpg" type="image/icon type">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+
+  *{
+  margin: 0;
+  padding: 0; 
+  }
+  html
+  {
+    scroll-behavior: smooth;
+  }
+  body
+  {
+    /*background-color: #5252d4;*/
+    font-family: 'Oswald',sans-serif;
+    scroll-behavior: smooth;
+  }
+  li
+  {
+    list-style-type: none;
+  }
+  h4 , p
+  {
+    padding: 5px 30px !important;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+li
+{
+  font-family: 'Montserrat',sans-serif;
+}
+nav li
+{
+  color: #fff;
+  font-size: 24px;
+}
+.dropdown-item a:focus
+{
+  color:purple!important;
+
+}
+.dropdown-item
+{
+  width:auto;
+}
+.linkedin , .facebook , .github
+{
+  color: #000;border:solid 2px transparent ;padding:8px;margin-right:4px;
+}
+ .linkedin:hover
+ {
+ background-color:#4267b2;
+ transition:2s ease;
+ }
+ .facebook:hover
+ {
+  background-color:#4267b2;
+  transition: 2s ease;
+ }
+ .github:hover
+ {
+background-color:#4267b2;
+transition:2s ease;
+ }
+  a
+  {
+    text-decoration: none;
+    color:#000;
+    text-underline-position: none;
+  }
+  a:hover
+  {
+    color: purple;
+    text-decoration: none;
+  }
+  footer a:hover
+  {
+    color: yellow;
+  }
+  /*===================Header==========================*/
+  #header{
+    min-height: 100vh;
+    position: relative;
+    background-image: url(asset/real_bg.png);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size:99vw 100%;
+  }
+  @media(max-width: 767px){
+    #header{
+      background-size: 100vw 70%;
+    }
+    
+  }
+
+  header h1
+  {
+    display: none;
+    overflow: hidden;
+  }
+  @media (max-width: 600px)
+  {
+   /* header
+    {
+      background-image: linear-gradient(to bottom right,#702da5,#6f30a9,#633ec4)!important;
+    }*/
+    header h1
+    {
+      display: block;
+      text-align: center;
+      padding-top:40px;
+      
+    }
+    #headerimg2 img
+    {
+      width:200px;height:200px;
+    }
+    #headerimg1 img
+    {
+      width:100px !important; height: 100px!important;
+      left:80vw !important;
+      animation-name: rot;
+      animation-duration: 8s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+    #headerimg3 img
+    {
+      width:100px!important ;height:75!important;
+      display: none!important;
+    }
+  }
+
+  @media (max-width: 500px)and(min-width:1000px)
+  {
+    /*header
+    {
+      background-image: linear-gradient(to bottom right,#702da5,#6f30a9,#633ec4)!important;
+    }*/
+    header h1
+    {
+      display: block;
+      text-align: center;
+      
+    }
+  }
+
+.mixBlnd
+{
+  background-blend-mode: screen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cont-about{
+        background-image:url('asset/about ecs.png');
+        background-size: 100% 100%;
+        background-position: center;
+        padding: 0;
+        margin: 0;
+        border:0;
+         min-height:100vh;
+        width: 100%;
+       
+    }
+    .about{
+      /*position: relative;*/
+      text-align: center;
+      
+      font-size: 5vh;
+      margin-top: 10vh;
+      z-index: 2;
+    }
+    .textabout{
+      padding: 20px;
+      /*position: relative;*/
+      /*left: 15vw;*/
+      text-align: justify;
+        
+      font-size: 1.2rem;
+      /*width: 70vw;*/
+      /*margin-top: 7vh;*/
+      z-index: 2;
+    }
+    .layer
+    {
+      width:0%;
+
+    }
+    .bgimage1{
+      /*content: url('asset/about ecs1.png');*/
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 60vh;
+      left: 20vw;
+      animation-name: antirot;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes antirot{
+      from {transform: rotate(0deg);}
+      to {transform: rotate(-360deg)};
+    }
+    .bgimage2{
+      /*content: url('asset/about ecs2.png');*/
+      position:absolute;
+      width: 100px;
+      height: 100px;
+      top: 30vh;
+      left:50vw;
+      opacity: 0.4;
+      transform:scaleX(-1);
+      animation-name: rot;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes rot{
+      0% {transform: rotate3d(0deg);}
+      100% {transform: rotate(160deg);}
+    }
+
+***********messages***************
+
+
+.largescreen_message , .smallscreen_message
+{
+  position:relative;
+}
+.message{
+    position: relative;
+    width: 95%;
+    font-size: 18px;
+    color: #000;
+   /*background-color:rgb(213, 198, 234);*/
+   background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+   min-height:45vh;
+   border-style:solid;	
+   border-color:transparent;	 	
+   border-bottom-right-radius:20%; 		
+
+}
+.message p{
+	color:white;
+}
+.message1
+{	
+   position: relative;
+    width: 95%;
+    font-size: 18px;
+    color: #000;
+   /*background-color:#8A2BE2;*/
+   /*background-color:rgb(213, 198, 234);*/
+    background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+ 	min-height: 45vh;
+   border-style:solid;	
+   border-color:transparent;	 	
+   border-bottom-left-radius:20%;
+}
+
+.message1 p{
+	color:white;
+}
+/*.message1:after
+{
+  content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*background-color:rgb(213, 198, 234);*/
+    /*background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+    transform-origin: bottom right;
+    -ms-transform: skew(30deg, 0deg);
+    -webkit-transform: skew(30deg, 0deg);
+    transform: skew(30deg, 0deg);
+}*/
+/*.message:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*background-color:rgb(213, 198, 234);*/
+    /* background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+    transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg); */
+/*}*/
+.thumbnail
+{
+  max-height:45vh;
+  max-width:45vh;
+}
+.thumbnail
+{
+  width:90%;
+  height:45vh;
+}
+.smallscreen_message
+{
+  display: none;
+}
+@media (max-width:1120px)
+{
+  .message p
+  {
+    font-size:14px!important;
+    letter-spacing: 1px;
+  }
+  .message1 p
+  {
+    font-size: 14px!important;
+    letter-spacing: 1px;
+  }
+  .message2 p
+  {
+    font-size: 14px!important;
+    letter-spacing: 1px;
+  }
+}
+@media (min-height: 500px) and (min-width: 1120px) and(max-width:1170px)
+{
+  .message , .message1, .message2
+  {
+    height:50vh;
+  }
+  .thumbnail
+  {
+    width: 50vh;
+    height: 50vh;
+  }
+
+}
+@media (min-height: 500px )and (max-width: 337px)
+{
+  .message , .message1, .message2
+  {
+    height:80vh;
+  }
+ 
+}
+@media (min-height:500px) and (max-width:500px)
+{
+  .message , .message1, .message2
+  {
+    height:66vh;
+  }
+
+}
+@media (min-height: 500px) and (max-width:435px) and (max-height:811px)
+{
+  .message , .message1, .message2
+  {
+    height:80vh;
+  }
+
+}
+@media (min-height: 812px) and (max-width:435px) 
+{
+  .message , .message1, .message2
+  {
+    height:45vh;
+  }
+
+}
+@media (min-height:500px)and(max-width:896px)
+{
+  .message , .message1, .message2
+  {
+    height:55vh;
+  }
+  
+}
+@media (min-height:400px) and (max-height: 499px) and (max-width: 375px)
+{
+   .message , .message1, .message2
+  {
+    height:80vh;
+  }
+
+}
+
+@media (min-height:400px) and (max-height: 499px) and (max-width: 435px)
+{
+   .message , .message1, .message2
+  {
+    height:70vh;
+  }
+}
+@media (min-height:400px) and (max-height: 499px) and (max-width: 896px)
+{
+   .message , .message1, .message2
+  {
+    height:55vh;
+  }
+ 
+}
+@media (min-height:400px) and (max-height: 499px) and (max-width: 896px)
+{
+   .message , .message1, .message2
+  {
+    height:50vh;
+  }
+  
+  .thumbnail
+  {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+@media (max-width: 896px)
+{
+.message:after
+{
+  display: none;
+}
+.message1:after
+{
+  display: none;
+}
+.message2:after
+{
+  display: none;
+}
+.message
+{
+  
+  width:100%;
+  border-radius: 0px 0px 10% 0px;
+}
+.message1
+{
+ 
+  width: 100%;
+  border-radius: 0px 0px 0px 10%;
+}
+.message2
+{
+ 
+  width: 100%;
+  border-radius: 0px 0px 0px 10%;
+}
+.thumbnail
+{
+  width:200px;
+  height: 200px;
+}
+}
+
+@media (max-width:575px)
+{
+  .largescreen_message
+  {
+    display: none;
+  }
+  .smallscreen_message
+  {
+    display: block;
+  }
+
+  .thumbnail-container
+  {
+    text-align:center!important;
+  }
+  .thumbnail
+  {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/*events*/
+  .events
+  {
+    position:relative;
+    background-image: url(asset/event2.png),url(asset/event3.png),url(asset/event.png);
+    background-position:15% 50%,75% 50%,bottom;background-repeat: no-repeat;
+    background-size:15%,15%,100%;height: 100vh;
+  }
+  @media  (max-width:767px){
+    .events
+  {
+    position:relative;
+    background-image: url(asset/event2.png),url(asset/event3.png);
+    background-position:15% 50%,75% 50%;
+    background-repeat: no-repeat;
+    background-size:15%,15%;
+    height: 100vh;
+  }
+  }
+@media  (max-width:964px)
+{
+  .events
+  {
+    height:50vh;
+    background-size:20%,20%,100vw 100vh;
+  }
+  .event_spectrum , .event_spectre
+  {
+    font-size:28px;
+  }
+
+
+}
+
+/* - &:nth-child(1) {
+       grid-area: entry1;
+     }
+   - useful timesaver if there is a lengthy list
+*/
+.timeline {
+  line-height: 1.5em;
+  font-size: 14px;
+  transition: all .4s ease;
+  position: relative;
+  counter-reset: section;
+}
+.timeline:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background: #87ceeb;
+  position: absolute;
+  top: 0;
+  left: -3.313em;
+  border-radius: 40px 40px;
+}
+
+.timeline--entry {
+  position: relative;
+  background-color: #eeeeee;
+}
+.timeline--entry__title {
+  color: white;
+  background-color: #ec407a;
+  font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1em;
+}
+.timeline--entry__title:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  left: -1em;
+  border-right: 10px solid #ec407a;
+}
+.timeline--entry__detail {
+  background-color: #dddddd;
+  padding: 1em;
+  margin: 0;
+}
+.timeline--entry:before {
+  content: "";
+  font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  background-color: #87ceeb;
+  border: .2em solid white;
+  border-radius: 50%;
+  position: absolute;
+  counter-increment: section;
+  content: counter(section);
+  text-shadow: 0 1px 0 #424242;
+  left: -4.5em;
+}
+
+@supports (display: grid) {
+  @media (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-gap: 4.75em;
+      grid-template-areas: ".  entry1" "entry2  ." ". entry3" "entry4 ." ". entry5";
+    }
+    .timeline:before {
+      left: 49.5%;
+    }
+
+    .timeline--entry:nth-child(1) {
+      grid-area: entry1;
+    }
+    .timeline--entry:nth-child(2) {
+      grid-area: entry2;
+    }
+    .timeline--entry:nth-child(3) {
+      grid-area: entry3;
+    }
+    .timeline--entry:nth-child(4) {
+      grid-area: entry4;
+    }
+    .timeline--entry:nth-child(5) {
+      grid-area: entry5;
+    }
+    .timeline--entry:nth-of-type(odd):before {
+      left: -3.8em;
+    }
+    .timeline--entry:nth-of-type(even):not(:nth-of-type(odd)) .timeline--entry__title:before {
+      left: 100%;
+      border-left: 10px solid #ec407a;
+      border-right: 0;
+    }
+    .timeline--entry:nth-of-type(even):before {
+      left: 103%;
+    }
+  }
+}
+
+
+button:hover
+{
+  box-shadow: 2px 10px 30px gray;
+  transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -ms-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  -webkit-transition: all 1.2s ease;
+}
+
+footer li a
+{
+  font-size: 20px;
+  color: white;
+}
+@media (max-width:795px)
+{
+  footer li
+  {
+    color: white!important;
+  }
+  footer .linkedin , footer .facebook , footer .github
+{
+  color: white!important;border:solid 2px white!important ;
+}
+footer h1
+{
+  color: white;
+
+}
+footer .col-sm-4
+{
+  color: white!important;
+}
+}
+
+@media(max-width: 1200px)
+{
+#headerimg1 img
+{
+  left:5vw!important;
+}
+#headerimg2 img
+{
+  top:8vw;
+
+}
+}
+@media (max-width:900px)
+{
+  #headerimg2 img
+  {
+    width:200px;height:200px;
+  }
+}
+#scene1 li
+{
+  width:90%;
+}
+@media (max-width:789px)
+{
+  .footer_list li a
+  {
+    color:white!important;
+  }
+}
+@media (max-width: 565px)
+{
+  footer
+  {
+    background-color: #674dd0;
+  }
+}
+@media (max-height:500px) and (max-width:577px)
+{
+footer
+{
+  background-color:#674dd0!important;
+}
+
+}
+
+
+.timeline-container h1
+  {
+  
+    display:flex;
+    justify-content:center;
+    align-items:top;
+    margin:0px;
+    font-size:28px;
+    padding:5px 0px;
+
+  }
+    .timeline-container
+    {
+      margin-left:5px;
+      margin-top:10px;
+          height:80%;
+          width:10px;
+          background-color:#724fc8;
+          border-radius:20px;
+          box-sizing: border-box;
+          margin-top:40px;
+          margin-left:5%;
+
+    }
+    .sub-cont
+    {
+      width:85%;
+      background-image:linear-gradient(to left,#d4c6eb,#d4c6eb);
+      border-style:solid;
+      border-color:transparent;  
+      position: absolute;
+      left:22px;
+      margin-left:5%;
+      box-sizing: border-box;
+    }
+    .sub-cont::after
+    {
+       content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 4px solid #724fc8;
+   top:12.5%;
+  border-radius: 50%;
+  z-index:20;
+  margin-left:-24px;
+    }
+    .smallscreen_about
+    {
+      display: none;
+    }
+    @media(max-width:778px)
+    {
+      .smallscreen_about
+      {
+        display: block!important;
+      }
+      .largescreen_about
+      {
+        display: none!important;
+      }
+      .sub-cont
+      {
+             width:85%;
+      }
+    }
+    @media(max-width:568px)
+    {
+      .timeline-container
+      {
+        height:120vh;
+      }
+    }
+    @media(max-height:499px)
+    {
+      .timeline-container
+      {
+        height:120vh;
+      }
+      .timeline-container p
+      {
+        padding:5px 0px 5px 0px;
+      }
+    }
+    @media(max-height:250px)
+    {
+      .timeline-container
+      {
+        height:150vh;
+      }
+    }
+
+
+
+/*Gallery slideshow*/
+*{
+    box-sizing: border-box;
+}
+
+.home{
+    overflow:hidden;
+    position: relative;
+    height: 50vh;width: 50vw;left: 25vw;border-color:#6f42c1;border-style:solid;
+    border-radius: 2%;
+    
+}
+
+.home .slider{
+	left: 25vw;
+}
+
+
+.home .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index:1; 
+    display:none;
+    animation: slide 2s ease;
+    background-repeat: no-repeat;
+}
+.home .slide.active{
+    display: flex;
+}
+@keyframes slide{
+    0%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.home .controls .prev,
+.home .controls .next{
+ position: absolute;
+ z-index:2;
+ top:50%;
+ height:40px;
+ width: 40px;
+ margin-top: -20px;
+ color:#ffffff;
+ background-color:#6f42c1;
+ opacity: 0.7;
+ text-align: center;
+ line-height: 40px;
+ font-size:20px;
+ cursor:pointer;
+ transition: all .5s ease;
+}
+.home .controls .prev:hover,
+.home .controls .next:hover{
+   opacity:1;
+}
+.home .controls .prev{
+ left:0;
+}
+.home .controls .next{
+ right:0;
+}
+
+.home .indicator{
+    position: absolute;
+    left:50%;
+    bottom:5%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.home .indicator div{
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    color:transparent;
+    background-color:transparent;
+    border-color:white;
+    border-style:solid;       
+    border-radius:50%;
+    text-align: center;
+    line-height: 20px;
+    margin:0 3px;
+    transition: background-color 1s,border-color 1s;
+    z-index: 2000;
+}
+.indicator div:hover{
+  background-color:#6f42c1;
+  border-style:solid; 
+  border-color:white;   
+} 
+
+
+.home .indicator div.active{
+ background-color:white;
+}
+.galleryspace{
+ height: 15vh;width: 100%;background-color:transparent;
+}
+.gallery-button{
+	top:5vh;
+	left: 45vw;
+	width:10vw;
+	position: relative; 
+	color:white;
+	border-color:transparent;
+	border-radius:2%;
+	background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+
+}
+
+/*responsive for gallery slideshow*/
+@media(max-width: 767px){
+    .controls{
+        display: none;
+    }
+    .home{
+        width: 90vw;
+        left: 5vw;
+        right: 5vw;
+        height: 50vw;
+    }
+    .home .indicator div{
+    
+    width:12.5px;
+    height: 12.5px;
+    line-height: 12.5px;
+}
+.galleryspace{
+ height: 15vh;
+
+}
+.gallery-button{
+	top:5vh;
+	left: 37.5vw;
+	width:25vw;
+	position: relative;
+}
+}
+
+
+/*=====Footer edited by aditya======*/
+.footer{
+	/*background-color: #1fd1f9;*/
+    background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+	min-height:50vh;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	border-top-left-radius: 10%;
+	border-top-style: solid;
+	border-top-color:transparent; 
+	border-top-right-radius: 10%;
+}
+@media(max-width: 767px){
+	.footer{
+	border-top-left-radius: 5%; 
+	border-top-right-radius: 5%;
+}	
+}
+
+/*=======button for members page in about us=======*/
+/* .members-button{
+	position: relative;
+	left:15vw;
+	width:15vw;
+	color:white;
+	border-color:transparent;
+	border-radius:2%;
+	background-image :linear-gradient(315deg, #314594  0%,  #712ea5 74%);
+
+} */
+/* @media(max-width: 767px){
+.members-button{
+	left:25vw;
+	width:50vw;
+}
+} */
+
+/*darkmode button*/
+.dark{
+    box-sizing: border-box;
+  }
+  .label{
+    background-color: #111;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width:50px;
+    border-radius:50px;
+  }
+  .fa-moon-o{
+    color:#f1c40f;
+  }
+  .fa-sun-o{
+    color:#f39c12;
+  }
+  .ball{
+    background-color:#fff;
+      position:absolute;
+      height: 22px;
+      width:22px;
+      top:2px;
+      left: 2px;
+      border-radius: 50%;
+      transition:transform .75s;
+    }
+    .checkbox{
+      opacity: 0;
+      position:absolute;
+    }
+    .checkbox:checked + .label .ball{
+      transform:translateX(24px); 
+    }
+    .darkbutton{
+    right:1.5%;
+    top:1%;
+  }
+@media(max-width: 991px){
+	/*darkmode button position in mobile view*/
+  .darkbutton{
+    right:43.055556%;
+    top:5.5%;
+  }
+}
+
+/*======arrow in about ecs========*/
+.arrow{
+	color:purple;font-size:32px
+}
+
+</style>
+<body onload="check()" style="background-image:none;">
+	
+ <header  id="header">
+
+ 	<!--====darkmode button=====-->
+ 	<div class="darkbutton"  style="position:fixed;z-index: 3000"> <input type="checkbox" class="checkbox" id="checkbox" name="light"> <label for="checkbox" class="label" onclick="test()"> <i
+  class="fa fa-moon-o"></i> <i class="fa fa-sun-o"></i> <div class="ball"></div>
+  </label> </div>
+   
+  <nav class="navbar  navbar-expand-lg navbar-dark navbar-trans menubar" style="font-family: 'Montserrat',sans-serif;">
+              <a class="navbar-brand" href="#"><!--<i class="" aria-hidden="true"></i>-->
+                              <!-- <img src="asset/about ecs.png" style="width:100px;height:100px"> -->
+                              <b style="font-size:48px;color:#fff;font-family:'Oswald',sans-serif">ECS</b>
+                            </a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+              <ul class="navbar-nav  mt-2 mt-lg-0">
+              
+                                    <li class="nav-item  active "><a class="nav-link" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/resources" target="_blank">Resource Hub</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/members">Members</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/developers">Developers</a></li>
+                 </ul>
+                </div>
+              </nav>
+
+              <h2 style="font:2em;font-family:'Oswald',sans-serif;color:#fff;font-variant:small-caps;text-align:center;display:flex;vertical-align: center;justify-content: center;padding:20px">Electronics and Communication Society, NIT Silchar</h2>
+         <div class="container" style="overflow: hidden;height: 100vh;width:95%">
+              <ul id="scene1">
+      <li class="layer" id="headerimg1"data-depth="-0.8"><img id="headerimage2"src="asset/landing2.png" style="position: absolute;left:10vw;width:200px;height:200px;top:-2vw"></li>
+      <p><li class="layer" id="headerimg2"data-depth="0.4"><img id="headerimage3" src="asset/landing3.png" style="position: absolute;"></li></p>
+      <li class="layer" id="headerimg3"data-depth="2" ><img id="headerimage1" src="asset/landing1.png" style="position: absolute;left:65%;width:150px;height:100px;top:9vw;z-index: 2"></li>
+    </ul></div>
+ </header>
+
+ <!-- =================messages====================================== -->
+ <section class="messages_" id="messages_"style="">
+<h1 style="text-align:center;font-variant:small-caps" class="reset-darkmode-text">Messages</h1>
+  
+     <p style="font-variant: small-caps;text-align:center;font-size:26px;color: #000" class="reset-darkmode-text">Message from Faculty Advisor</p>
+    <div class="row no-gutters" style="overflow: hidden;margin-top:2%;margin-bottom:2%;">
+      <div class="col-sm-3 thumbnail-container" style="text-align: right;">
+        <img src="photos/wasim.jpg" class="thumbnail">
+      </div>
+    
+      <div class="col-sm-9">
+
+         <div class="message" id="faculty_advisor"><p style="padding:0px 5px;letter-spacing:1.5px;text-align: justify;">
+             As Faculty Advisor of the Electronics and Communication Society, I wish you all a very productive and prosperous New Year 2020.
+<br>
+I congratulate all the ECS members on the launch of their website and wish all the proud ECEians the very best, to continue their excellent work and bring pride to all of you and us.
+<br>
+Looking forward to working closely to achieve our shared goals to innovate, create and win.
+          <br><br><a style="line-height:0.5em;font-size:16px">Faculty Advisor, ECS</a><br><a style="font-size:16px">Dr.Wasim Arif</a>
+        </p>
+          </div>
+         </div>
+      </div>
+      
+   
+    <p style="font-variant: small-caps;text-align:center;font-size:26px;color: #000" class="reset-darkmode-text">Message from President,ECS</p>
+    <div class="largescreen_message row no-gutters"style="margin-top:2%;margin-bottom:2%;overflow: hidden;">
+      <div class=" col-sm-9" >
+         <div class="message1" id="President" style="float: right;">
+           <p style="position: absolute;padding:0px 5px;text-align: justify;">Dear Colleagues, It is my privilege to serve as President of the ECS 2020-21. ECS is the most active society of NITS. It stands here because of the hard work and the contribution given by our respected seniors and teachers. I am keen to build on the work of past Presidents and other members to help steer our society through some of the notable challenges that lie ahead.<br>The Year 2020 has been challenging for everyone. At the same time, we as a society have given our best for the betterment of ECE and NITS as a whole.I believe that they all are capable of taking the society as well as the branch to marvellous new heights. I wish good health for everyone and all the very best for achieving success in the carrier ahead.<br>Make ECE and NITS proud.
+          <br><a style="line-height:0.5em;font-size:16px">President,ECS</a><br><a style="font-size:16px">Yogesh Shukla</a>
+        </p>
+         </div>
+      </div>
+       <div class="col-sm-3 thumbnail-container" style="text-align: left;">
+        <img src="photos/yogesh.jpg" class="thumbnail img-fluid">
+      </div>
+    </div>
+      <div class="row no-gutters smallscreen_message "style="margin-top:30px">
+       <div class="col-sm-3 thumbnail-container" style="text-align: left;">
+        <img src="photos/yogesh.jpg" class="thumbnail img-fluid">
+      </div>
+      <div class="col-sm-9" >
+         <div class="message1" id="President">
+           <p style="padding:0px 5px;position: absolute;">Dear Colleagues, It is my privilege to serve as President of the ECS 2020-21. ECS is the most active society of NITS. It stands here because of the hard work and the contribution given by our respected seniors and teachers. I am keen to build on the work of past Presidents and other members to help steer our society through some of the notable challenges that lie ahead.<br>The Year 2020 has been challenging for everyone. At the same time, we as a society have given our best for the betterment of ECE and NITS as a whole.I believe that they all are capable of taking the society as well as the branch to marvellous new heights. I wish good health for everyone and all the very best for achieving success in the carrier ahead.<br>Make ECE and NITS proud.
+          <br><a style="line-height:0.5em;font-size:16px">President,ECS</a><br><a style="font-size:16px">Yogesh Shukla</a>
+        </p>
+         </div>
+      </div>
+    </div>
+
+
+    <p style="font-variant: small-caps;text-align:center;font-size:26px;color: #000" class="reset-darkmode-text">Message from Vice President</p>
+    <div class="row no-gutters" style="overflow: hidden;margin-top:2%;margin-bottom:2%;">
+      <div class="col-sm-3 thumbnail-container" style="text-align: right;">
+        <img src="photos/ranjeeta.jpg" class="thumbnail">
+      </div>
+    
+      <div class="col-sm-9">
+
+         <div class="message" id="faculty_advisor"><p style="padding:0px 5px;letter-spacing:1.5px;text-align: justify;">
+            Being a proud ECEian, I am pleased to take up the position of Vice President of ECS for the session 2020-21. I believe we, as a society, have always focused on contributing to enhancing the skill set of every member of the society and will continue doing the same in the future. Together, we can improvise and build the tech-culture in our college. I wish everyone the best of luck for all their future endeavours.
+          <br><br><a style="line-height:0.5em;font-size:16px">Vice President, ECS</a><br><a style="font-size:16px">Ranjeeta Kumari</a>
+        </p>
+          </div>
+         </div>
+      </div>
+</section>
+
+<!--===========================ABOUT ECS =============================== -->
+ <section class="aboutus" id="aboutus" style="position: relative;">
+    
+    <div class="cont-about">
+        
+
+       <div id="container" class="container" style="width:90vw">
+    <div id="scene" class="scene">
+      <div  class="layer " data-depth="-1"><img  class="bgimage1"src="asset/about ecs1.png"></div>
+    <div class="layer " data-depth="2"><img  class="bgimage2"src="asset/about ecs2.png"></div>
+
+    </div>
+  </div>
+      <div class = "row no-gutters">
+      <div class="col-md-1">
+        
+      </div>
+      <div class="col-md-5 largescreen_about" style="margin:0;min-height: 100vh;overflow:hidden">
+        <div class="about"><h1 style="font-variant:small-caps" class="reset-darkmode-text">Events</h1></div>
+         <div class="timeline-container reset-darkmode-text">
+         <div class="sub-cont"style="">
+          <h1 style="font-variant:small-caps">ORIENTATION</h1>
+          <p style="font-size:0.73em;">An introductory session for the fresh faces to interact with the branch members and faculties, and build up their knowledge about the Branch. Newly admitted students can clear their doubts and queries regarding the branch and it’s functioning.
+          </div>
+         <div class="sub-cont" style="top:40%;margin-top:2%">
+          <h1>SPECTRUM</h1>
+          <p style="font-size:0.75em">The technical weekend of ECS, alias Spectrum, is the platform where students are urged to showcase their technical skills and knowledge which is conducted once annually. It nurtures their base and helps them strengthen their skills in a fun way.</p>
+         </div>
+         <div class="sub-cont" style="top:60%;margin-top:2%">
+          <h1>SPECTRUM CONNECT</h1>
+           <p style="font-size:0.7em">Under our current situation, ECS conducted an online event called Spectrum Connect. The sole purpose of this event was to connect the students of NITS, who lost their contact with each other owing to the ongoing, seemingly perpetual, lockdown. This event conducted online games, cultural events and technical events.</p>
+         </div>
+          <div class="sub-cont" style="top:80%;margin-top:2%">
+          <h1>DEHLEEZ</h1>
+           <p style="font-size:0.75em">Like every exclusive section, ECE also has it's own branch farewell by the name Dehleez. Since the session gets over and the time comes to go past the limit set in the four years, the name clearly justifies the occasion. It is basically a cultural get-together to bid adios to our beloved seniors.</p>
+         </div>
+
+    </div>
+</div>
+       
+      <div class=" col-md-5">
+        <div class="about">
+      <h1 style="font-variant:small-caps" class="reset-darkmode-text">About ECS</h1>
+    </div>
+    
+    <p class="textabout d-flex align-items-center">
+        <ul style="font-style: 'Montserrat',sans-serif;padding:30px;font-size:1.2rem" class="reset-darkmode-text">
+        <li><b class="arrow">&#8594;</b>Electronics and communication society, ECS is known for its activeness and creativity.</li><br>
+        <li><b class="arrow">&#8594;</b>This society stands on the frontline to dig out innovative minds and raw talents.</li><br>
+        <li><b class="arrow">&#8594;</b>ECS provides the most suitable platform for students to showcase their skills, be it academic, technical or cultural.</li>
+       <li><b class="arrow">&#8594;</b>ECS always facilitates the freshers with warm atmosphere so that they get acquainted with the norms of the branch and the college and also encourages them to create a fresh bond with the seniors. </li>
+        </ul>
+       </p></div>
+       
+       
+       <div class="col-md-5 smallscreen_about" style="margin:0;min-height: 100vh;overflow:hidden">
+        <div class="about reset-darkmode-text">We Organise:</div>
+         <div class="timeline-container reset-darkmode-text">
+          <div class="sub-cont"style="">
+            <h1 style="font-variant:small-caps">ORIENTATION</h1>
+            <p style="font-size:0.77em;">An introductory session for the fresh faces to interact with the branch members and faculties, and build up their knowledge about the Branch. Newly admitted students can clear their doubts and queries regarding the branch and it’s functioning.
+            </div>
+           <div class="sub-cont" style="top:40%;margin-top:2%">
+            <h1>SPECTRUM</h1>
+            <p style="font-size:0.725em">The technical weekend of ECS, alias Spectrum, is the platform where students are urged to showcase their technical skills and knowledge which is conducted once annually. It nurtures their base and helps them strengthen their skills in a fun way.</p>
+           </div>
+           <div class="sub-cont" style="top:60%;margin-top:2%">
+            <h1>SPECTRUM CONNECT</h1>
+             <p style="font-size:0.675em">Under our current situation, ECS conducted an online event called Spectrum Connect. The sole purpose of this event was to connect the students of NITS, who lost their contact with each other owing to the ongoing, seemingly perpetual, lockdown. This event conducted online games, cultural events and technical events.</p>
+           </div>
+            <div class="sub-cont" style="top:80%;margin-top:2%">
+            <h1>DEHLEEZ</h1>
+             <p style="font-size:0.75em">Like every exclusive section, ECE also has it's own branch farewell by the name Dehleez. Since the session gets over and the time comes to go past the limit set in the four years, the name clearly justifies the occasion. It is basically a cultural get-together to bid adios to our beloved seniors.</p>
+           </div>
+
+    </div>
+</div>
+
+
+       <div class="col-md-1"></div>
+  </div>
+
+  </div></section>
+
+
+  
+</section>
+
+<!-- ============================Spectrum=========================-->
+<section class="events" id="events" style="height: 100vh">
+  
+  <h1 style="font-size:48px;text-align: center;font-variant:small-caps">Annual Attractions</h1>
+  <h1 class="event_spectrum"style="position: absolute;left:17%;top:45%"><a href="/spectrum" class="reset-darkmode-text" target="_blank" style="font-family:'Montserrat',sans-serif;font-variant:small-caps">Spectrum</a></h1>
+
+  <h1 class="event_spectre"style="position: absolute;left:70%;top:45%"><a class="reset-darkmode-text" href="/spectre" target="_blank" style="font-family: 'Montserrat',sans-serif;font-variant:small-caps" >Spectre</a></h1>
+
+</section>
+
+<!-- =================================gallery ================================ -->
+<div class="galleryspace"></div>
+
+<section class="home">
+ 
+    <div class="slider">
+        <div class="slide active" style="background-image: url('gallery photos/ece 23.jpg');">    
+        </div>
+        <div class="slide" style="background-image: url('gallery photos/s5.jpg')">
+        </div>
+        <div class="slide" style="background-image: url('gallery photos/o5.jpg')">
+        </div>
+        <div class="slide active" style="background-image: url('gallery photos/s7.jpg');">    
+        </div>
+        <div class="slide" style="background-image: url('gallery photos/u6.jpg')">
+        </div>
+     </div>
+   <!-- controls  -->
+    <div class="controls">
+        <div class="prev gallery-next-prev"><</div>
+        <div class="next gallery-next-prev">></div>
+    </div>
+
+    <!-- indicators -->
+    <div class="indicator">
+    </div>
+</section>
+<div class="galleryspace">
+	<a href="/gallery"><button class="gallery-button">Gallery</button></a>
+</div>
+
+
+<!--============Footer================ -->
+<footer id="contact" class="footer">
+  <div class="row no-gutters" style="color:white;padding:30px;">
+    <div class="col-sm-4" style="text-align: center;margin-top:40px">
+      <h1 style="text-align: center;">Quick Links</h1>
+             <ul  class="footer_list"style="color: #fff">
+              <li><a href="/resources" target="_blank">Resource Hub</a></li>
+              <li><a href="#messages_">Messages</a></li>
+              <li><a href="#events">Annual Attractions</a></li>
+              <li><a href="#aboutus">About Us</a></li>
+              <li><a href="/members">Members</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/developers">Developers</a></li>
+             </ul>
+    </div>
+    <div class="col-sm-4" style="text-align: center;margin-top:40px">
+      <h1 style="text-align:center;">Contact us</h1>
+      <a style="font-family: 'Montserrat',sans-serif">Email : ecs.nits2021@gmail.com</a>
+      <br>
+      <a href="https://www.facebook.com/groups/ecsnits" style="text-align:center;margin-top:15px"><b style="color:gray;font-family:'Montserrat',sans-serif">Follow us On:  </b><i class="fa fa-facebook facebook" style="color: #fff;border:solid 2px #fff;padding:8px;margin-right:4px"></i></a>
+              <!-- <a href=""><i class="fa fa-linkedin linkedin"style="color: #fff;border:solid 2px #fff;padding:8px;margin-right:4px"></i></a>
+              <a href=""><i class="fa fa-github github"style="color: #fff;border:solid 2px #fff;padding:8px;"></i></a> -->
+    </div>
+    <div class="col-sm-4" style="text-align: center;margin-top:40px">
+      <h1>Version 2.0 Developed by:<br></h1>
+        <h1 style="font-size: 20px">Aditya Bhura
+            <br>Aadi Verma
+            <br>Afsana Yasmin
+            <br>Kaustbh Patil
+        <h4 style="font-family:'Amatic SC',sans-serif;">Content by:<br></h4>
+        <h1 style="font-size: 20px">
+        Prapti Khasyap<br>
+        Afsana Yasmin
+        </h1>
+    </div>
+  </div>
+</footer>
+<!-- ===================================scripts ============================== -->
+     <script src="js/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="bootstrap.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script type="text/javascript" src="parallax.js"></script>
+       <script type="text/javascript">
+        AOS.init();
+  </script>
+     
+       <script>
+  // the onReady function is called as soon as Parallax knows what input method to use. This might take up to 1000ms (supportDelay * 2) after initialisation
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+ var scene1 = document.getElementById('scene1');
+  var parallax1 = new Parallax(scene1);
+  </script>
+
+
+
+<!--Javascrit for gallery slideshow-->
+<script>
+const slides=document.querySelector(".slider").children;
+ const prev=document.querySelector(".prev");
+ const next=document.querySelector(".next");
+ const indicator=document.querySelector(".indicator");
+ let index=0;
+
+
+   prev.addEventListener("click",function(){
+       prevSlide();
+       updateCircleIndicator(); 
+       resetTimer();
+   })
+
+   next.addEventListener("click",function(){
+      nextSlide(); 
+      updateCircleIndicator();
+      resetTimer();
+      
+   })
+
+   // create circle indicators
+    function circleIndicator(){
+        for(let i=0; i< slides.length; i++){
+            const div=document.createElement("div");
+                  div.innerHTML=i+1;
+                div.setAttribute("onclick","indicateSlide(this)")
+                div.id=i;
+                if(i==0){
+                    div.className="active";
+                }
+               indicator.appendChild(div);
+        }
+    }
+    circleIndicator();
+
+    function indicateSlide(element){
+         index=element.id;
+         changeSlide();
+         updateCircleIndicator();
+         resetTimer();
+    }
+     
+    function updateCircleIndicator(){
+        for(let i=0; i<indicator.children.length; i++){
+            indicator.children[i].classList.remove("active");
+        }
+        indicator.children[index].classList.add("active");
+    }
+
+   function prevSlide(){
+     if(index==0){
+        index=slides.length-1;
+     }
+     else{
+        index--;
+     }
+     changeSlide();
+   }
+
+   function nextSlide(){
+      if(index==slides.length-1){
+        index=0;
+      }
+      else{
+        index++;
+      }
+      changeSlide();
+   }
+
+   function changeSlide(){
+           for(let i=0; i<slides.length; i++){
+             slides[i].classList.remove("active");
+           }
+
+       slides[index].classList.add("active");
+   }
+
+   function resetTimer(){
+      // when click to indicator or controls button 
+      // stop timer 
+      clearInterval(timer);
+      // then started again timer
+      timer=setInterval(autoPlay,4000);
+   }
+ 
+  
+  function autoPlay(){
+      nextSlide();
+      updateCircleIndicator();
+  }
+
+  let timer=setInterval(autoPlay,4000);
+ </script>
+
+<!--darkmode switch-->
+<script>
+  var dark=document.getElementsByClassName("darkbutton");
+    var darkButton=document.getElementById("dark");
+    var checkbox=document.getElementById("checkbox");
+    const currentTheme = localStorage.getItem("theme");
+    console.log(currentTheme);
+    console.log(window.scrollY);
+    console.log(screen.width)
+    if(screen.width<=991){
+      document.addEventListener('scroll',function(){
+      if(window.scrollY>=68){
+        dark[0].style.right="3vw";
+        dark[0].style.top="2vw";
+    }else{
+      dark[0].style.right="43.055556%";
+      dark[0].style.top="5.5%";
+    }
+    });
+    }
+    
+    
+      function check(){
+        var checkbox=document.getElementById("checkbox");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        // console.log("theme="+theme );
+        if (currentTheme=="dark") {
+            darkTheme();
+            checkbox.setAttribute("checked","true");
+          } else {
+            console.log("Light Mode");
+            checkbox.name="light";
+          }
+      }
+
+      var body=document.body;
+      var header=document.getElementById("header");
+      // var headerimage1=document.getElementById("headerimage1");
+      // var headerimage2=document.getElementById("headerimage2");
+      // var headerimage3=document.getElementById("headerimage3");
+      var text=document.getElementsByClassName("reset-darkmode-text");
+      var message=document.getElementsByClassName("message");
+      var message1=document.getElementsByClassName("message1");
+      var aboutbg=document.getElementsByClassName("cont-about");
+      var bgimage1=document.getElementsByClassName("bgimage1");
+      var bgimage2=document.getElementsByClassName("bgimage2");
+      var timelineContainer=document.getElementsByClassName("timeline-container");
+      var arrow=document.getElementsByClassName("arrow");
+      var subCont=document.getElementsByClassName("sub-cont");
+      // var membersButton=document.getElementsByClassName("members-button");
+      var events=document.getElementsByClassName("events");
+      var gallery=document.getElementsByClassName("home");
+      var galleryButton=document.getElementsByClassName("gallery-button");
+      var galleryNextPrev=document.getElementsByClassName("gallery-next-prev");
+      var footer=document.getElementsByClassName("footer");
+
+  function darkTheme(){
+
+            checkbox.name="dark";
+            var newTheme="dark";
+            console.log("themeset="+newTheme);
+            
+            header.style.backgroundImage="url('asset/dark/real_bg.png')";
+       		// headerimage1.src="asset/dark/landing1.png";
+       		// headerimage2.src="asset/dark/landing2.png";
+       		// headerimage3.src="asset/dark/landing3.png";
+       		body.style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+       		for(var i=0;i<text.length;i++){  
+              text[i].style.color="white";
+            }
+            message[0].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message[1].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message1[0].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message1[1].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message[0].style.borderColor= "white";
+            message[1].style.borderColor= "white";
+            message1[0].style.borderColor= "white";
+            message1[1].style.borderColor= "white";
+            aboutbg[0].style.backgroundImage="url('asset/dark/about ecs.png')";
+            bgimage1[0].src="asset/dark/about ecs1.png";
+            bgimage2[0].src="asset/dark/about ecs2.png";
+            timelineContainer[0].style.backgroundColor="white";
+            timelineContainer[1].style.backgroundColor="white";
+            for(var i=0;i<arrow.length;i++){  
+              arrow[i].style.color="white";
+            }
+            for(var i=0;i<subCont.length;i++){  
+              subCont[i].style.backgroundImage="linear-gradient(315deg, #5b6467 0%, #8b939a 74%)";
+              subCont[i].style.borderColor="white";
+            }
+            // membersButton[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            // membersButton[0].style.borderColor="white";
+            if(screen.width>990){
+              events[0].style.backgroundImage="url(asset/event2.png),url(asset/event3.png),url(asset/dark/event.png)";
+            }   
+            events[0].style.color="white";
+            gallery[0].style.borderColor="white";
+            galleryButton[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            galleryButton[0].style.borderColor="white";
+            for(var i=0;i<galleryNextPrev.length;i++){  
+              galleryNextPrev[i].style.backgroundColor="white";
+              galleryNextPrev[i].style.color="black";
+            }
+            footer[0].style.borderTopColor="white";
+            footer[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+    localStorage.setItem("theme",newTheme);
+  }
+
+//Change theme by checkbox
+function test(){
+
+if(checkbox.name=="light"){
+            checkbox.name="dark";
+            console.log(checkbox.name);
+            var newTheme="dark";
+            console.log("themeset="+newTheme);
+            header.style.backgroundImage="url('asset/dark/real_bg.png')";
+         //    headerimage1.src="asset/dark/landing1.png";
+       		// headerimage2.src="asset/dark/landing2.png";
+       		// headerimage3.src="asset/dark/landing3.png";
+       		body.style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+       		for(var i=0;i<text.length;i++){  
+              text[i].style.color="white";
+            } 
+             message[0].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message[1].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message1[0].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message1[1].style.backgroundImage= "linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            message[0].style.borderColor= "white";
+            message[1].style.borderColor= "white";
+            message1[0].style.borderColor= "white";
+            message1[1].style.borderColor= "white";
+            aboutbg[0].style.backgroundImage="url('asset/dark/about ecs.png')";
+            bgimage1[0].src="asset/dark/about ecs1.png";
+            bgimage2[0].src="asset/dark/about ecs2.png";
+            timelineContainer[0].style.backgroundColor="white";
+            timelineContainer[1].style.backgroundColor="white";
+            for(var i=0;i<arrow.length;i++){  
+              arrow[i].style.color="white";
+            }
+            for(var i=0;i<subCont.length;i++){  
+              subCont[i].style.backgroundImage="linear-gradient(315deg, #5b6467 0%, #8b939a 74%)";
+              subCont[i].style.borderColor="white";
+            }
+            // membersButton[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            // membersButton[0].style.borderColor="white";
+            if(screen.width>990){
+              events[0].style.backgroundImage="url(asset/event2.png),url(asset/event3.png),url(asset/dark/event.png)";
+            } 
+            events[0].style.color="white";
+             gallery[0].style.borderColor="white";
+            galleryButton[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+            galleryButton[0].style.borderColor="white";
+            for(var i=0;i<galleryNextPrev.length;i++){  
+              galleryNextPrev[i].style.backgroundColor="white";
+              galleryNextPrev[i].style.color="black";
+            }
+            footer[0].style.borderTopColor="white";
+            footer[0].style.backgroundImage="linear-gradient(147deg, #000000 0%, #1d1c1cf0 74%)";
+
+}else{
+    checkbox.name="light";
+    console.log(checkbox.name);
+    var newTheme="light";
+    console.log(newTheme +" new set");
+    header.style.backgroundImage="url('asset/real_bg.png')";
+    // headerimage1.src="asset/landing1.png";
+    // headerimage2.src="asset/landing2.png";
+    // headerimage3.src="asset/landing3.png";
+    body.style.backgroundImage="none";
+    for(var i=0;i<text.length;i++){  
+              text[i].style.color="black";
+            } 
+    message[0].style.backgroundImage= "linear-gradient(315deg, #314594 0%, #712ea5 74%)";
+    message[1].style.backgroundImage= "linear-gradient(315deg, #314594 0%, #712ea5 74%)";
+    message1[0].style.backgroundImage= "linear-gradient(315deg, #314594 0%, #712ea5 74%";
+    message1[1].style.backgroundImage= "linear-gradient(315deg, #314594 0%, #712ea5 74%";
+    message[0].style.borderColor= "transparent";
+    message[1].style.borderColor= "transparent";
+    message1[0].style.borderColor= "transparent";
+    message1[1].style.borderColor= "transparent";
+    aboutbg[0].style.backgroundImage="url('asset/about ecs.png')";	
+    bgimage1[0].src="asset/about ecs1.png";
+    bgimage2[0].src="asset/about ecs2.png";
+    timelineContainer[0].style.backgroundColor="#724fc8";
+    timelineContainer[1].style.backgroundColor="#724fc8";
+    for(var i=0;i<arrow.length;i++){  
+              arrow[i].style.color="purple";
+            }
+            for(var i=0;i<subCont.length;i++){  
+              subCont[i].style.backgroundImage="linear-gradient(to left,#d4c6eb,#d4c6eb)";
+              subCont[i].style.borderColor="transparent";
+            }
+            // membersButton[0].style.backgroundImage="linear-gradient(315deg, #314594  0%,  #712ea5 74%)";
+            // membersButton[0].style.borderColor="transparent";
+            if(screen.width>990){
+              events[0].style.backgroundImage="url(asset/event2.png),url(asset/event3.png),url(asset/event.png)";
+            } 
+            
+            events[0].style.color="black";
+            gallery[0].style.borderColor="#6f42c1";
+            galleryButton[0].style.backgroundImage="linear-gradient(315deg, #314594  0%,  #712ea5 74%)";
+            galleryButton[0].style.borderColor="transparent";
+            for(var i=0;i<galleryNextPrev.length;i++){  
+              galleryNextPrev[i].style.backgroundColor="#6f42c1";
+              galleryNextPrev[i].style.color="white";
+            }
+            footer[0].style.borderTopColor="transparent";
+            footer[0].style.backgroundImage="linear-gradient(315deg, #314594  0%,  #712ea5 74%)";
+}
+localStorage.setItem("theme",checkbox.name);
+}
+
+  </script>
+
+
+</body>
+</html>

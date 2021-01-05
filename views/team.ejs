@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ECS|Members</title>
+  <link rel="icon" href="ecs logo/logo.jpg" type="image/icon type">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Oswald&display=swap');
+   html,body{
+    width:100%;
+    margin:0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'oswald', cursive;    
+  } 
+  body{
+    background-image: url('asset/about ecs.png');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:100vw 100vh;
+    background-origin: center
+  }
+  .no:hover{
+    cursor: not-allowed;
+  }
+  .b{
+    padding-left: 10%;
+    padding-right: 10%;
+   }
+   .align{
+    
+    border-radius: 50%;
+    height:50%;
+    width: 50%;
+    position: absolute;
+    bottom:40%;
+    left: 25%;
+  }
+
+   /*president and vice president*/
+  .a{
+    padding-top: 33.333333%;
+    transition: transform 1.5s;
+    text-align: center;
+    background-color: #9921e8;
+    background-image :linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+    border-radius: 2% 2% 2% 2%;
+  } 
+  .static2{
+    padding-top: 33.333333%;
+    width:16.666667%;
+  }
+   .static1{
+      padding-top: 33.333333%;
+      width:8.333333%;
+   }
+  .a h1{
+      /*text-align: left;*/
+      color:white;
+      width: 100%;
+      font-size:3vw;
+      position: absolute;
+      bottom: 7vw;
+      height: 2vw;
+      left: 0%;
+      word-wrap: break-word; 
+      word-break: break-all;
+      animation:  fadeIn 1s;  
+  }
+   .a p{
+      text-align: center;
+      color:white;
+      left: 0%;
+      position: absolute;
+      bottom: 2.5vw;
+      width: 100%;
+      font-size: 2vw;
+      margin-bottom:1%; 
+      word-wrap: break-word; 
+      word-break: break-all;
+       animation:  fadeIn 1s;
+   }
+    .a:hover{
+     transform:rotateY(360deg);
+     padding-top: 25%;
+   }
+  .a:hover> h1{
+      display: none;
+  }
+  .a:hover> p{
+      display: none;
+  }
+  .a:hover>.links button{
+    animation: fadeIn 1s ease-in-out;
+    display:inline-block;
+    position: absolute;
+    bottom:17.5%;
+    opacity: 1;
+  }
+  
+  /*rest of the members*/
+  .c{
+    padding-top: 25%;
+    transition: transform 1.5s;
+    text-align: center;
+    background-image :linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+    border-radius: 2% 2% 2% 2%;
+  } 
+  .static2{
+    padding-top: 25%;
+    width:16.666667%;
+  }
+   .static1{
+      padding-top: 25%;
+      width:8.333333%;
+   }
+  .c h1{
+      /*text-align: left;*/
+      color:white;
+      width: 100%;
+      font-size:1.75vw;
+      position: absolute;
+      bottom: 5vw;
+      height: 2vw;
+      left: 0%;
+      word-wrap: break-word; 
+      word-break: break-all;
+      animation:  fadeIn 1s;  
+  }
+   .c p{
+      text-align: center;
+      color:white;
+      left: 0%;
+      position: absolute;
+      bottom: 2.5vw;
+      width: 100%;
+      font-size: 1.5vw;
+      margin-bottom:1%; 
+      word-wrap: break-word; 
+      word-break: break-all;
+       animation:  fadeIn 1s;
+   }
+    .c:hover{
+     transform:rotateY(360deg);
+     padding-top: 25%;
+   }
+  .c:hover> h1{
+      display: none;
+  }
+  .c:hover> p{
+      display: none;
+  }
+  .c:hover>.links button{
+    animation: fadeIn 1s ease-in-out;
+    display:inline-block;
+    position: absolute;
+    bottom: 17.5%;
+    opacity: 1;
+  }
+  .headspace{
+    height:5vw;
+    text-align: center;
+    font-size:4vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    /*text-transform: uppercase;*/
+    letter-spacing:0.01vw; 
+    color:white;
+    font-weight: bold;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    font-variant: small-caps;   
+  }
+  .spacing{
+    height:5vw;
+    background-color: transparent;
+    width: 100%;
+  }
+  .resize{
+    margin-right:12.5%;
+    margin-left: 12.5%;
+  }
+  #resizetext{
+    font-size:1.4vw;
+  }
+  .a  .fa{
+    font-size: 2.5vw;
+  }
+
+  /*aligning the icon*/
+  @media (min-width:767px){
+   .c .fa{
+    font-size: 1.850000vw;
+    position: absolute;
+    bottom: .35vw;
+    left:.6vw;
+    text-align: center;   
+  }
+
+  .c .fa-facebook{
+    left:.8vw;
+  }
+  }
+  
+  #head{
+    z-index: 1000;
+    font-size: 5vw;
+    text-align: center;
+    font-variant: small-caps;
+    color:#751cad;
+  }
+
+
+  
+  /*social media links*/
+  button{
+    display: none;
+    align-content: center;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 50%;
+    height:15%;
+    text-align: center;
+  }
+  #buttonblue{
+    background-color: transparent;border-color: transparent;
+  }
+   #buttonblack{
+    background-color: transparent;border-color: transparent;
+  }
+    #buttonblue{
+      transition: background-color 0.75s,border-color 0.75s;
+    }
+    #buttonblack{
+      transition: background-color 0.75s,border-color 0.75s;
+    }
+    #buttonblue:hover{
+      background-color: blue;
+      border-color: transparent;
+      color:white;
+    }
+    #buttonblack:hover{
+       background-color: black;
+       border-color: black;
+       color:white;
+    }
+
+    #element1 
+  {
+    left:10%;
+    top:50%;
+  animation-name: rotating;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-duration: 2s;
+  transform:scaleX(-1);position: absolute;
+  width:50px;
+  height:50px;
+  top:50vh
+
+}
+
+   .rotation1
+ {
+   animation-name: womanworking;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+  left:30vw;
+  width:100px;
+  height:100px;
+ }
+ .rotation2
+ {
+   animation-name: rotating;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  position: absolute;
+  width:50px;
+  height:50px;
+  left:50vw;top:60vh
+ }
+  .woman-working img
+ {
+  animation-name: womanworking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+ }
+
+ #ecs{
+  font-size:5vw;
+ }
+
+    /*animations*/
+    @keyframes fadeIn {
+     0%{ opacity: 0; }
+      50%{ opacity: 0;}
+      100%{opacity: 1;}
+    }
+     @keyframes womanworking
+ {
+  0%
+  {
+transform:rotate3d(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+ }
+  @keyframes rotating
+ {
+  0%
+  {
+transform:rotate3d(180deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  } 
+ }
+
+
+
+    /*mobile view*/
+   @media(max-width: 767px){
+    .a{
+    padding-top: 100%;
+   } 
+    .b{
+    padding-left: 25%;
+    padding-right: 25%;
+   }
+   .a h1{
+      font-size:4.75vw;
+      bottom: 15vw;
+   }
+   .a p{
+      bottom:5vw;
+      width: 100%;
+      font-size: 4.25vw;
+   }
+   .a:hover{
+     transform:rotateY(360deg);
+     padding-top: 100%;
+    }
+
+  .c{
+    padding-top: 100%;
+    }
+  .c h1{
+      font-size:4.75vw;
+      bottom: 15vw;
+   }
+   .c p{
+      bottom:5vw;
+      width: 100%;
+      font-size: 4.25vw;
+   }
+   .c:hover{
+     transform:rotateY(360deg);
+     padding-top: 100%;
+    }
+    .resize{
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom:5%;
+      margin-top: 5%;
+    }
+    #resizetext{
+      font-size: 3.75vw;
+    }
+    .upmargin{
+      margin-top: 5%;
+    }
+    .spacing{
+      display: none;
+      }
+    .remove{
+      display: none;
+    }
+     .a  .fa{
+    font-size: 5vw;
+  }
+
+  .c .fa{
+    font-size: 5vw;
+  }
+  #head{
+    font-size:12.5vw;
+    text-align:center;
+   font-variant:small-caps;
+  }
+  #ecs{
+  font-size:10vw;
+ }
+  /*darkmode button position in mobile view*/
+  .darkbutton{
+    right:2%;
+    top:2%;
+  }
+  }
+
+  /*darkmode button*/
+  .dark{
+    box-sizing: border-box;
+  }
+  .label{
+    background-color: #111;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width:50px;
+    border-radius:50px;
+  }
+  .fa-moon-o{
+    color:#f1c40f;
+  }
+  .fa-sun-o{
+    color:#f39c12;
+  }
+  .ball{
+    background-color:#fff;
+      position:absolute;
+      height: 22px;
+      width:22px;
+      top:2px;
+      left: 2px;
+      border-radius: 50%;
+      transition:transform .75s;
+    }
+    .checkbox{
+      opacity: 0;
+      position:absolute;
+    }
+    .checkbox:checked + .label .ball{
+      transform:translateX(24px); 
+    }
+    .darkbutton{
+    right:2.5%;
+    top:3.5%;
+  }
+
+
+
+
+   </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body onload="check()">
+
+  <div class="darkbutton"  style="position:fixed;z-index: 3000"> <input type="checkbox" class="checkbox"
+  id="checkbox" name="light"> <label for="checkbox" class="label" onclick="test()"> <i
+  class="fa fa-moon-o"></i> <i class="fa fa-sun-o"></i> <div class="ball"></div>
+  </label> </div>
+
+
+
+<div><a id="ecs" style="text-decoration: none;position:fixed;z-index:2000;font-family:'Oswald',sans-serif;"href="/">ECS</a>
+</div>
+
+    <div class="team-header" style="height:100vh;">
+      <div class="row no-gutters">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" style="height: 100vh">
+          <div id="container" class="container">
+            <div id="scene" class="scene">
+              <div class="layer"data-depth="-1"><img id="element1" src="asset/event2.png">
+              </div>
+              <div class="layer" data-depth="0.5"><img class="rotation1" src="asset/about ecs3.png">
+              </div>
+              <div class="layer"data-depth="2" ><img class="rotation2" src="asset/about ecs1.png">
+              </div>
+              <div  data-depth="0.00" class="d-flex align-items-center justify-content-center"style="position:absolute;width:98%;height:100vh;"><h1 id="head">Members
+              <br> 2020-2021</h1></div>
+
+            </div>
+          </div> 
+        </div>
+        <div class="col-sm-3"></div>
+      </div> 
+    </div>
+
+
+  <!-- Members list starts here -->
+  <div class="container-fluid b">
+  
+  <!-- President and vice president -->
+  <div class="row">
+    <div class="col-md-1 static1" style="background-color: transparent;"></div>
+    <div class="col-md-4 a" data-aos="flip-left">
+      <img  class="align" src="photos/yogesh.jpg">
+      <h1>Yogesh Shukla</h1>
+      <p>President</p>
+      <div class="links">
+        <a href="https://m.facebook.com/yogesh.shukla.12?ref=bookmarks"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/yogesh-shukla-239318160"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="https://github.com/Yogesh654"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-4 a upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/ranjeeta.jpg">
+      <h1>Ranjeeta Kumari</h1>
+      <p>Vice President</p>
+      <div class="links">
+        <a href="https://www.facebook.com/ranjeeta.kumari.33821"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/ranjeeta-kumari-6b7397182/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="https://github.com/ranjeeta01"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-1 static1 remove" style="background-color: transparent;"></div>
+  </div>
+
+  <!-- Senior members -->
+  <h3 class="headspace" data-aos="zoom-in">Senior Members</h3>
+  <div class="row">
+    <div class="col-md-3 c" data-aos="flip-left">
+      <img  class="align" src="photos/suramya.jpeg">
+      <h1>Suramya Das</h1>
+      <p>General Secretary</p>
+      <div class="links">
+        <a href="https://www.facebook.com/suramya.das1"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/suramya-das-4a788a162/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="https://github.com/suramyadas01"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c resize" data-aos="flip-left">
+      <img  class="align" src="photos/aashwin.jpg">
+      <h1>Aashiwin Mehrotra</h1>
+      <p>Treasurer</p>
+      <div class="links">
+        <a href="https://www.facebook.com/aashwin.mehrotra"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c" data-aos="flip-left">
+      <img  class="align" src="photos/ayan.jpg">
+      <h1>Ayan Talukdar</h1>
+      <p>Senior Executive Member</p>
+     <div class="links">
+      <a href="https://www.facebook.com/ayan.talukdar2k"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/in/ayan-talukdar-b05933174/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="row">
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/subhra.jpg">
+      <h1>Shubra Shanka Sharma</h1>
+      <p>Senior Executive Member</p>
+     <div class="links">
+      <a href="https://www.facebook.com/profile.php?id=100011168774680"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/in/subhra-sankha-sarma-8472b0184/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="https://github.com/imsubhra"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+    </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/arshita.jpg">
+      <h1>Arshita Narayan</h1>
+      <p>Technical Head</p>
+     <div class="links">
+      <a href="https://www.facebook.com/arshita.narayan.3"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/in/arshita-narayan-bb427b176/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="https://github.com/arshita04"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+    </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+  </div>
+
+
+  <!-- Junior Members -->
+    <h3 class="headspace" data-aos="zoom-in">Junior Members</h3>
+    <div class="row">
+    <div class="col-md-3 c" data-aos="flip-left">
+      <img  class="align" src="photos/aditya.jpg">
+      <h1>Aditya Bhura</h1>
+      <p>Junior Technical Member</p>
+      <div class="links">
+        <a href="https://www.facebook.com/aditya.bhura.5"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/aditya-bhura-98b43a1a2/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="https://github.com/adityabhura"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c resize" data-aos="flip-left">
+      <img  class="align" src="photos/kaustubh.jpg">
+      <h1>Kaustubh Patil</h1>
+      <p>Junior Technical Member</p>
+      <div class="links">
+        <a href="https://www.facebook.com/kaustubh.patil.5492"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="https://github.com/kausti18"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c" data-aos="flip-left">
+      <img  class="align" src="photos/harsh.jpg" >
+      <h1>P Harsha Reddy</h1>
+      <p>Junior Technical Member</p>
+      <div class="links">
+        <a href="https://www.facebook.com/profile.php?id=100011657892905"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+     </div>
+    </div>
+    
+    <div class="spacing"></div>
+
+    <div class="row">
+    <div class="col-md-3 c upmargin" data-aos="flip-left" >
+      <img  class="align" src="photos/Rohit.jpg">
+      <h1>Rohit Raj</h1>
+      <p>Junior Executive Member</p>
+     <div class="links">
+      <a href="https://www.facebook.com/profile.php?id=100032323343163"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/in/rohit-raj-663895199"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c resize" data-aos="flip-left">
+      <img  class="align" src="photos/amar.jpg">
+      <h1>Amar Chetri</h1>
+      <p>Junior Executive Member</p>
+     <div class="links">
+      <a href="https://www.facebook.com/aman.chetri.313"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="#"><button class="btn-primary social no" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+    </div>
+    <div class="col-md-3 c" data-aos="flip-left">
+      <img  class="align" src="photos/suvadip.jpg">
+      <h1>Suvadip Sahu</h1>
+      <p>Junior Executive Member</p>
+      <div class="links">
+        <a href="https://www.facebook.com/profile.php?id=100008151019194"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+     </div>
+    </div>
+
+    <div class="spacing"></div>
+    
+    <div class="row">
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/afsana.jpg">
+      <h1>Afsana Yasmin</h1>
+      <p id="resizetext">Literary And PR Representative</p>
+     <div class="links">
+      <a href="https://www.facebook.com/afsanayasmin.37"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/in/afsana-yasmin-92585519b"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="https://github.com/afsana15"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+      </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/prapti.jpg">
+      <h1>Prapti Kashyap</h1>
+       <p id="resizetext">Literary And PR Representative</p>
+      <div class="links">
+        <a href="https://www.facebook.com/prapti.kashyap"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/prapti-kashyap-b206321a0"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="row">
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/dipesh.jpg">
+      <h1>Dipesh Sinha</h1>
+      <p id="resizetext">Graphics And Media Designers</p>
+     <div class="links">
+      <a href="https://m.facebook.com/dipesh.sinha.3"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+        <i class="fa fa-facebook"></i><br>
+      </button></a>
+      <a href="https://www.linkedin.com/mwlite/in/dipesh-sinha-3102b8199"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+        <i class="fa fa-linkedin"></i>
+      </button></a>
+      <a href="https://www.github.com/deep-2008"><button class="btn-primary social" id="buttonblack" style="left: 65%;width: 15%;">
+        <i class="fa fa-github"></i>
+      </button></a>
+      </div>
+      </div>
+    <div class="col-md-2 static2 remove" style="background-color: transparent;"></div>
+    <div class="col-md-3 c upmargin" data-aos="flip-left">
+      <img  class="align" src="photos/ruchika.jpeg">
+      <h1>Ruchika Parag Barman</h1>
+      <p id="resizetext">Graphics And Media Designers</p>
+      <div class="links">
+        <a href="https://www.facebook.com/ruchika.paragbarman"><button class="btn-primary social" id="buttonblue" style="left: 20%;width: 15%;">
+          <i class="fa fa-facebook"></i><br>
+        </button></a>
+        <a href="https://www.linkedin.com/in/ruchika-parag-barman-a42395195/"><button class="btn-primary social" id="buttonblue" style="left: 42.5%;width: 15%;">
+          <i class="fa fa-linkedin"></i>
+        </button></a>
+        <a href="#"><button class="btn-primary social no" id="buttonblack" style="left: 65%;width: 15%;">
+          <i class="fa fa-github"></i>
+        </button></a>
+      </div>
+    </div>
+    <div class="col-md-2 static2" style="background-color: transparent;"></div>
+  </div>
+
+  <div class="spacing"></div>
+
+</div>
+
+<script>
+  var darkButton=document.getElementById("dark");
+  var checkbox=document.getElementById("checkbox");
+  const currentTheme = localStorage.getItem("theme");
+  console.log(currentTheme);
+    function check(){
+      var checkbox=document.getElementById("checkbox");
+      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      // console.log("theme="+theme );
+      if (currentTheme=="dark") {
+          darkTheme();
+          checkbox.setAttribute("checked","true");
+        } else {
+          console.log("Light Mode");
+          checkbox.name="light";
+        }
+    }
+function darkTheme(){
+
+    var body=document.body;
+    var head=document.getElementById("head");
+    var rotation1=document.getElementsByClassName("rotation1");
+    var rotation2=document.getElementsByClassName("rotation2");
+    var a=document.getElementsByClassName("a");
+    var c=document.getElementsByClassName("c");
+    var headspace=document.getElementsByClassName("headspace");
+    var ecslogo=document.getElementById("ecs");
+    
+          checkbox.name="dark";
+          var newTheme="dark";
+          console.log("themeset="+newTheme);
+          body.style.backgroundImage="url('asset/dark/about ecs.jpg')";
+          head.style.color="white";
+          rotation1[0].src="asset/dark/about ecs3.png";
+          rotation2[0].src="asset/dark/about ecs1.png";
+          ecslogo.style.color="#ca00ef";
+          for(var i=0;i<a.length;i++){
+            a[i].style.backgroundColor="#000000";
+            a[i].style.backgroundImage="linear-gradient(147deg, #000000 0%, #434343 74%)";
+            a[i].style.borderStyle="solid";
+            a[i].style.borderColor="white";
+            a[i].style.borderWidth="1px";
+          } 
+          for(var i=0;i<c.length;i++){
+            c[i].style.backgroundColor="#000000";
+            c[i].style.backgroundImage="linear-gradient(147deg, #000000 0%, #434343 74%)";
+            c[i].style.borderStyle="solid";
+            c[i].style.borderColor="white";
+            c[i].style.borderWidth="1px";
+          }
+          for(var i=0;i<headspace.length;i++){
+            headspace[i].style.backgroundColor="transparent";
+            headspace[i].style.backgroundImage="none";
+            headspace[i].style.borderStyle="solid";
+            headspace[i].style.borderColor="white";
+            headspace[i].style.borderWidth="1px";
+          }
+  localStorage.setItem("theme",newTheme);
+}
+
+//Change theme by checkbox
+function test(){
+
+var body=document.body;
+var head=document.getElementById("head");
+var rotation1=document.getElementsByClassName("rotation1");
+var rotation2=document.getElementsByClassName("rotation2");
+var a=document.getElementsByClassName("a");
+var c=document.getElementsByClassName("c");
+var headspace=document.getElementsByClassName("headspace");
+var ecslogo=document.getElementById("ecs");
+
+if(checkbox.name=="light"){
+          checkbox.name="dark";
+          console.log(checkbox.name);
+          var newTheme="dark";
+          console.log("themeset="+newTheme);
+          body.style.backgroundImage="url('asset/dark/about ecs.jpg')";
+          head.style.color="white";
+          rotation1[0].src="asset/dark/about ecs3.png";
+          rotation2[0].src="asset/dark/about ecs1.png";
+          ecslogo.style.color="#ca00ef";
+          for(var i=0;i<a.length;i++){
+            a[i].style.backgroundColor="#000000";
+            a[i].style.backgroundImage="linear-gradient(147deg, #000000 0%, #434343 74%)";
+            a[i].style.borderStyle="solid";
+            a[i].style.borderColor="white";
+            a[i].style.borderWidth="1px";
+          } 
+          for(var i=0;i<c.length;i++){
+            c[i].style.backgroundColor="#000000";
+            c[i].style.backgroundImage="linear-gradient(147deg, #000000 0%, #434343 74%)";
+            c[i].style.borderStyle="solid";
+            c[i].style.borderColor="white";
+            c[i].style.borderWidth="1px";
+          }
+          for(var i=0;i<headspace.length;i++){
+            headspace[i].style.backgroundColor="transparent";
+            headspace[i].style.backgroundImage="none";
+            headspace[i].style.borderStyle="solid";
+            headspace[i].style.borderColor="white";
+            headspace[i].style.borderWidth="1px";
+          }
+}else{
+  checkbox.name="light";
+  console.log(checkbox.name);
+  var newTheme="light";
+  console.log(newTheme +" new set");
+  body.style.backgroundImage="url('asset/about ecs.png')";
+  head.style.color="#751cad";
+  rotation1[0].src="asset/about ecs3.png";
+  rotation2[0].src="asset/about ecs1.png";
+  ecslogo.style.color="blue";
+  for(var i=0;i<a.length;i++){
+  a[i].style.backgroundColor="#9921e8";
+  a[i].style.backgroundImage="linear-gradient(315deg, #9921e8 0%, #5f72be 74%)";
+  a[i].style.borderStyle="none";
+  a[i].style.borderColor="none";
+    } 
+  for(var i=0;i<c.length;i++){
+    c[i].style.backgroundColor="#9921e8";
+    c[i].style.backgroundImage="linear-gradient(315deg, #9921e8 0%, #5f72be 74%)";
+    c[i].style.borderStyle="none";
+    c[i].style.borderColor="none";
+    c[i].style.borderWidth="1px";
+    }
+    for(var i=0;i<headspace.length;i++){
+      headspace[i].style.backgroundColor="#1fd1f9";
+      headspace[i].style.backgroundImage=" linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%)";
+      headspace[i].style.borderStyle="none";
+      headspace[i].style.borderColor="none";
+      headspace[i].style.borderWidth="0px";
+    }
+}
+localStorage.setItem("theme",checkbox.name);
+}
+
+</script>
+
+<script src="js/popper.min.js"></script>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="bootstrap.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script type="text/javascript" src="parallax.js"></script>
+      <script type="text/javascript">
+  $(function () {
+    $('[data-toggle="popover"]').popover({html:true})
+  })
+     AOS.init();
+  </script>
+       <script>
+  // the onReady function is called as soon as Parallax knows what input method to use. This might take up to 1000ms (supportDelay * 2) after initialisation
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  </script>
+ 
+</body>
+</html>
